@@ -3,7 +3,7 @@ import LogoImport from '../../../assets/logo.png';
 
 const Logo = () => (
   <div>
-    <img src={LogoImport} alt="Logo " />
+    <img className="img-responsive" src={LogoImport} alt="Logo " />
   </div>
 );
 

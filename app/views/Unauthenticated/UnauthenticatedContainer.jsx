@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import Logo from '../common/logos/Logo';
-import SuccessButton from '../common/buttons/SuccessButton';
+import { Switch, Route } from 'react-router-dom';
+import SignupForm from './components/SignupForm';
 import LoginForm from './components/LoginForm';
+import UnauthenticatedLayout from '../common/layouts/UnauthenticatedLayout';
 
 export default class UnauthenticatedContainer extends Component {
   render() {
     return (
-      <div>
-        <Logo />
-        <SuccessButton />
-        <LoginForm />
-      </div>
+      <UnauthenticatedLayout>
+        <Switch>
+          <Route exact path="/" component={SignupForm} />
+          <Route path="/login" component={LoginForm} />
+        </Switch>
+      </UnauthenticatedLayout>
     );
   }
 }
