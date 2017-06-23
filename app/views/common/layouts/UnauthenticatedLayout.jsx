@@ -5,7 +5,7 @@ import Logo from '../logos/Logo';
 export default class UnauthenticatedLayout extends Component {
   render() {
     return (
-      <div>
+      <div className="container-fluid">
         <Logo />
         {this.props.children}
       </div>

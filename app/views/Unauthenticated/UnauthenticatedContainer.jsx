@@ -5,12 +5,32 @@ import LoginForm from './components/LoginForm';
 import UnauthenticatedLayout from '../common/layouts/UnauthenticatedLayout';
 
 export default class UnauthenticatedContainer extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.login = (e) => {
+      e.preventDefault();
+    };
+
+    this.signup = (e) => {
+      e.preventDefault();
+    };
+  }
+
   render() {
     return (
       <UnauthenticatedLayout>
         <Switch>
-          <Route exact path="/" component={SignupForm} />
-          <Route path="/login" component={LoginForm} />
+          <Route
+            exact
+            path="/"
+            render={props => <SignupForm {...props} handleSubmit={this.signup} />}
+          />
+          <Route
+            path="/login"
+            render={props => <LoginForm {...props} handleSubmit={this.login} />}
+          />
         </Switch>
       </UnauthenticatedLayout>
     );
