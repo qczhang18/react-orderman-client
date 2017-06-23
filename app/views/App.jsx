@@ -9,9 +9,9 @@ import React, { Component } from 'react';
 
 
 // Component imports
-//import SignupContainer from './Signup/SignupContainer';
+// import SignupContainer from './Signup/SignupContainer';
 
-import Routes from './Routes'
+import Routes from './Routes';
 
 /**
  * @class App
@@ -23,11 +23,10 @@ import Routes from './Routes'
  */
 export default class App extends Component {
   render() {
-    return
-    //<SignupContainer />;
-    <Routes />
+    return <Routes />;
+//    <SignupContainer />;
   }
-};
+}
 
 
 App.propTypes = {};

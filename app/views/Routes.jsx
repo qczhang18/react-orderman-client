@@ -8,7 +8,7 @@ export default class Routes extends Component {
     return (
       <Router >
         <Switch>
-          <Route path="/" component={UnauthenticatedContainer} ></Route>
+          <Route path="/" component={UnauthenticatedContainer} />
         </Switch>
       </Router>
     );
