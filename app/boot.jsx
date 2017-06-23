@@ -11,6 +11,7 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 
 /**
@@ -21,15 +22,16 @@ import {} from './styles/cssImports';
 
 
 // Component imports
-import App from './views/App';
-
+// import App from './views/App';
+import Routes from './views/Routes';
 
 /**
  * We're saying that the <App /> should be mounted on the div with
  * ID 'app'. If you look at our `index.ejs` file, you'll see that
  * there is a simple div with the ID 'app'.
  */
-ReactDOM.render(
-  <App />,
-  document.getElementById('app'),
-);
+ReactDOM.render((
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>
+), document.getElementById('app'));
